@@ -30,7 +30,7 @@
 </div>
 <div class="grid">
     
-    <div class="col-3">  
+    <div class="col-6">  
         <p-card>
             <ul>
                 <li>Fecha</li>
@@ -38,6 +38,14 @@
                 <li>Fecha | short </li>
                 <li>Fecha | long </li>
                 <li>Fecha | Mes Dia, Año </li>
+            </ul>
+            <hr>
+            <ul>
+                <li>France</li>
+                <li>United Kingdom</li>
+                <li>Alemania</li>
+                <li>Rusia(Mosku)</li>
+                <li>Japón</li>
             </ul>
         </p-card>             
     </div>
@@ -50,19 +58,16 @@
                 <li>{{ fecha | date:'long' }}</li>
                 <li>{{ fecha | date:'MMMM dd, yyyy'  }}</li>
             </ul>
+            <hr>
+            <ul>
+                <li>{{ fecha | date:'EEEE dd, MMMM YYYY h:mm:ss a zzzz':'':'fr' }}</li>
+                <li>{{ fecha | date:'EEEE dd, MMMM YYYY h:mm:ss a zzzz':'':'en'}}</li>
+                <li>{{ fecha | date:'EEEE dd, MMMM YYYY h:mm:ss a zzzz':'':'de' }}</li>
+                <li>{{ fecha | date:'EEEE dd, MMMM YY h:mm:ss a zzzz':'':'ru' }}</li>
+                <li>{{ fecha | date:'EEEE dd, MMMM YY h:mm:ss a zzzz':'':'ja' }}</li>
+            </ul>
         </p-card>         
     </div>
-    <div class="col-3">
-        <p-card>
-            <ul>
-                <li>Formato: original new Date()</li>
-                <li>Formato: 'MMM d, y'</li>
-                <li>Formato: 'M/d/yy, h:mm a'</li>
-                <li>Formato: 'MMMM d, y, h:mm:ss a z'</li>
-                <li>Formato: 'mes completo dia, año'</li>
-            </ul>
-        </p-card> 
-
-    </div>
+    
 
 </div>

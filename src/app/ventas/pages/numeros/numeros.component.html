@@ -1,1 +1,35 @@
-<p>numeros works!</p>
+<div class="text-layout">
+    <h1>DecimalPipe y Porcentaje</h1>
+    <p>Pipe para 'mostrar' decimales incluidos en el Common Module</p>
+</div>
+<div class="grid">
+    
+    <div class="col-4">  
+        <p-card 
+        header="Ventas netas"
+        subheader="del presente año">
+            <!--Decimales de 2 hasta 2, si ponemos 2-4 iria de dos hasta 4 decimales -->
+            <p>{{ ventasNetas | number:'1.2-2'}} <i class="pi pi-euro"></i>&nbsp; &nbsp; / &nbsp; &nbsp;
+                {{ (ventasNetas) * 0.99 | number:'1.2-2' }} 
+                <i class="pi pi-dollar"></i></p>
+        </p-card>             
+    </div>
+    <div class="col-4">
+        <p-card 
+        header="Ventas brutas"
+        subheader="del presente año">
+        <p>{{ ventasBrutas | currency:'EUR' }}&nbsp; &nbsp; / &nbsp; &nbsp;
+        {{ (ventasBrutas + 2000000) * 0.99 | currency:'USD' }} </p>          
+            
+        </p-card>         
+    </div>
+    <div class="col-4">
+        <p-card 
+        header="Ganancia Porcentual"
+        subheader="del presente año">
+        <p>{{ ((ventasNetas) / (ventasBrutas))*100 | percent:'2.2-2' }}</p>          
+            
+        </p-card>         
+    </div>
+
+</div>
